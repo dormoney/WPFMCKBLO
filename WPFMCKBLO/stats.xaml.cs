@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,18 +16,18 @@ using System.Windows.Shapes;
 namespace WPFMCKBLO
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для stats.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class stats : Page
     {
-        public MainWindow()
+        public stats()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            Frame.NavigationService.Navigate(new StartPage());
+            NavigationService.GoBack();
         }
     }
 }
