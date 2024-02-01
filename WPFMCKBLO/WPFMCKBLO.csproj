@@ -8,4 +8,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+	  <Resource Include="Fonts\films.EXH_____.ttf"/>
+	  <Resource Include="Fonts\films.EXL_____.ttf"/>
+  </ItemGroup>
+
 </Project>

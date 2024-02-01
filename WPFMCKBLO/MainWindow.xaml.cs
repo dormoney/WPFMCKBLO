@@ -23,7 +23,7 @@ namespace WPFMCKBLO
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Frame.NavigationService.Navigate(new StartPage());
+            Frame.NavigationService.Navigate(new StartPage()); //переходы на следующую страницу
         }
     }
 }

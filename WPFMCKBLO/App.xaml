@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:WPFMCKBLO"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Exocet Heavy">pack://application:,,,/Fonts/#Exocet Heavy</FontFamily>
+        <FontFamily x:Key="Exocet Light">pack://application:,,,/Fonts/#Exocet Light</FontFamily>
     </Application.Resources>
 </Application>

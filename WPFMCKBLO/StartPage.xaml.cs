@@ -27,7 +27,7 @@ namespace WPFMCKBLO
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();   
+            System.Windows.Application.Current.Shutdown();   //закрытие программы
         }
 
         private void stats_Click(object sender, RoutedEventArgs e)

@@ -9,7 +9,7 @@
       Title="StartPage">
 
     <Grid Background="Black">
-        <Button x:Name="Exit" Content="Button" HorizontalAlignment="Left" Margin="123,40,0,0" VerticalAlignment="Top" Height="90" Width="301" Click="Exit_Click"/>
-        <Button x:Name="stats" Content="Button" HorizontalAlignment="Left" Margin="181,245,0,0" VerticalAlignment="Top" Height="75" Width="272" Click="stats_Click"/>
+        <Button x:Name="Exit" Content="&lt;" Block.LineHeight="1" Margin="28,0,0,0" Click="Exit_Click" FontFamily="Papyrus" Background="#00000000" Foreground="#FF616100" BorderBrush="#00000000" BorderThickness="0,0,0,0" Grid.RowSpan="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="UltraBold" FontSize="36" Height="59" Width="59"/>
+        <Button x:Name="stats" Content="MULTIPLAYER" HorizontalAlignment="Center" Margin="0,181,0,0" VerticalAlignment="Top" Height="44" Width="199" Click="stats_Click" FontFamily="{StaticResource Exocet Light}" FontSize="24" Background="#00000000" Foreground="#FF616100" BorderBrush="#00000000"/>
     </Grid>
 </Page>
