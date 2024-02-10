@@ -6,5 +6,85 @@
     <Application.Resources>
         <FontFamily x:Key="Exocet Heavy">pack://application:,,,/Fonts/#Exocet Heavy</FontFamily>
         <FontFamily x:Key="Exocet Light">pack://application:,,,/Fonts/#Exocet Light</FontFamily>
+        <LinearGradientBrush x:Key="Gradientik" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#d2c78d" Offset="0"/>
+            <GradientStop Color="#b2ad66" Offset="0.45"/>
+            <GradientStop Color="#5f611a" Offset="0.78"/>
+            <GradientStop Color="#161300" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="InvertGradientik" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#161300" Offset="0"/>
+            <GradientStop Color="#5f611a" Offset="0.45"/>
+            <GradientStop Color="#b2ad66" Offset="0.78"/>
+            <GradientStop Color="#d2c78d" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="ExitGrad" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#FF480000" Offset="0"/>
+            <GradientStop Color="#FF930000" Offset="0.45"/>
+            <GradientStop Color="Red" Offset="0.78"/>
+            <GradientStop Color="#FF930000" Offset="1"/>
+        </LinearGradientBrush>
+        <Style x:Key="HoverExitDelete" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Foreground" Value="{StaticResource Gradientik}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="3" BorderBrush="Black" CornerRadius="3">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource ExitGrad}"/>
+                                <Setter Property="Foreground" Value="{StaticResource ExitGrad}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="HoverDelete" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Foreground" Value="{StaticResource Gradientik}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="3" BorderBrush="Black" CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource InvertGradientik}"/>
+                                <Setter Property="Foreground" Value="{StaticResource InvertGradientik}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="TextBoxStyle1" BasedOn="{x:Null}" TargetType="{x:Type TextBox}">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="FontFamily" Value="{StaticResource Exocet Light}"/>
+            <Setter Property="Foreground" Value="{StaticResource Gradientik}"/>
+            <Setter Property="SelectionBrush" Value="{StaticResource InvertGradientik}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="bg" BorderBrush="{StaticResource Gradientik}" BorderThickness="1">
+                            <ScrollViewer x:Name="PART_ContentHost" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="BorderBrush" TargetName="bg" Value="{StaticResource InvertGradientik}"/>
+                                <Setter Property="BorderThickness" TargetName="bg" Value="2"/>
+                                <Setter Property="Foreground" Value="{StaticResource InvertGradientik}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

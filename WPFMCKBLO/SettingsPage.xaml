@@ -1,0 +1,34 @@
+﻿<Page x:Class="WPFMCKBLO.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPFMCKBLO"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SettingsPage" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="1920" MinHeight="1080">
+
+    <Grid Background="Black" MinWidth="1920" MinHeight="1080">
+        <Button x:Name="GoBack" Content="&lt;" Style="{StaticResource HoverDelete}" FontFamily="Papyrus" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" Height="77" Width="76" Click="GoBack_Click" Background="#00000000" FontSize="46" FontWeight="UltraBold" Grid.RowSpan="2"/>
+        <Button x:Name="MusicOn" Content="On" Style="{StaticResource HoverDelete}" FontFamily="{StaticResource Exocet Light}" HorizontalAlignment="Left" Margin="386,0,0,0" VerticalAlignment="Center" Height="77" Width="138" FontSize="46" Click="MusicOn_Click" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="MusicOff" Content="Off" Style="{StaticResource HoverDelete}" FontFamily="{StaticResource Exocet Light}" HorizontalAlignment="Left" Margin="550,0,0,0" VerticalAlignment="Center" Height="77" Width="155" FontSize="46" Click="MusicOff_Click" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="MusicText" FontFamily="{StaticResource Exocet Light}" Foreground="{StaticResource Gradientik}" Content="MUSIC:" HorizontalAlignment="Left" Margin="193,0,0,0" VerticalAlignment="Center" FontSize="46" Height="77" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="180"/>
+        <Label x:Name="Slash" FontFamily="{StaticResource Exocet Light}" Foreground="{StaticResource Gradientik}" Content="/" HorizontalAlignment="Left" Margin="524,0,0,0" VerticalAlignment="Center" FontSize="46" Height="77" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+    </Grid>
+</Page>

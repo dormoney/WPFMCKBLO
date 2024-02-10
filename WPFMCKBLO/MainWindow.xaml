@@ -8,7 +8,7 @@
         WindowStyle="None"
         Loaded="Window_Loaded"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" MinWidth="1920" MinHeight="1079.4">
     <Grid Background="Black">
         <Frame x:Name="Frame" Content="Frame" NavigationUIVisibility="Hidden"/>
 

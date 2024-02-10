@@ -9,9 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Logo\Diablo_1996_logo.png" />
+    <None Remove="Music\01 Diablo Intro.mp3" />
+    <None Remove="Music\01-Diablo-Intro.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Fonts\" />
-	  <Resource Include="Fonts\films.EXH_____.ttf"/>
-	  <Resource Include="Fonts\films.EXL_____.ttf"/>
+	<Resource Include="Fonts\films.EXH_____.ttf" />
+	<Resource Include="Fonts\films.EXL_____.ttf" />
+	<Resource Include="Logo\Diablo_1996_logo.png" />
+	<Resource Include="Music\01-Diablo-Intro.wav" />
   </ItemGroup>
 
 </Project>
+    

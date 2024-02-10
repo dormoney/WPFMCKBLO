@@ -6,10 +6,33 @@
       xmlns:local="clr-namespace:WPFMCKBLO"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="StartPage">
+      Title="StartPage" MinWidth="1920" MinHeight="1080">
 
-    <Grid Background="Black">
-        <Button x:Name="Exit" Content="&lt;" Block.LineHeight="1" Margin="28,0,0,0" Click="Exit_Click" FontFamily="Papyrus" Background="#00000000" Foreground="#FF616100" BorderBrush="#00000000" BorderThickness="0,0,0,0" Grid.RowSpan="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="UltraBold" FontSize="36" Height="59" Width="59"/>
-        <Button x:Name="stats" Content="MULTIPLAYER" HorizontalAlignment="Center" Margin="0,181,0,0" VerticalAlignment="Top" Height="44" Width="199" Click="stats_Click" FontFamily="{StaticResource Exocet Light}" FontSize="24" Background="#00000000" Foreground="#FF616100" BorderBrush="#00000000"/>
+    <Grid Background="Black" MinWidth="1920" MinHeight="1080">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="SinglePlayer" Content="SINGLE PLAYER" Style="{StaticResource HoverDelete}" FontFamily="{StaticResource Exocet Light}" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Height="83" Width="960" FontSize="46" Grid.Column="1"/>
+        <Image Margin="0,45,0,0" Grid.RowSpan="4" Source="/Logo/Diablo_1996_logo.png" Stretch="Fill" Grid.Column="1"/>
+        <Button x:Name="MultiPlayer" Content="MULTI PLAYER" Style="{StaticResource HoverDelete}" FontFamily="{StaticResource Exocet Light}" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="84" Width="960" FontSize="46" Grid.Column="1"/>
+        <Button x:Name="Settins" Content="SETTINGS" Style="{StaticResource HoverDelete}" FontFamily="{StaticResource Exocet Light}" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Height="83" Width="960" FontSize="46" Grid.Column="1" Click="Settins_Click"/>
+        <Button x:Name="Exit" Content="EXIT MCKBLO" Style="{StaticResource HoverExitDelete}" FontFamily="{StaticResource Exocet Light}" HorizontalAlignment="Center" Grid.Row="8" VerticalAlignment="Center" Height="83" Width="960" FontSize="46" Grid.Column="1" Click="Exit_Click"/>
     </Grid>
 </Page>

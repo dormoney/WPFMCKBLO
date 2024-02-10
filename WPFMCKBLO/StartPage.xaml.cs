@@ -27,12 +27,12 @@ namespace WPFMCKBLO
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();   //закрытие программы
+            System.Windows.Application.Current.Shutdown();
         }
 
-        private void stats_Click(object sender, RoutedEventArgs e)
+        private void Settins_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new stats());
+            NavigationService.Navigate(new SettingsPage());
         }
     }
 }

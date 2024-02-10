@@ -19,11 +19,22 @@ namespace WPFMCKBLO
         public MainWindow()
         {
             InitializeComponent();
+            var sri = Application.GetResourceStream(new Uri("pack://application:,,,/Music/01-Diablo-Intro.wav"));
+            if (sri != null)
+            {
+                using (var s = sri.Stream)
+                {
+                    System.Media.SoundPlayer MusicPlayer = new System.Media.SoundPlayer(s);
+                    MusicPlayer.Load();
+                    MusicPlayer.Play();
+                    MusicPlayer.PlayLooping();
+                }
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Frame.NavigationService.Navigate(new StartPage()); //переходы на следующую страницу
+            Frame.NavigationService.Navigate(new StartPage()) ; //переходы на следующую страницу
         }
     }
 }
